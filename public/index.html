@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChatGPT Customizable</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>ChatGPT</h1>
+      <button id="toggle-editor" class="editor-toggle">Editor Mode</button>
+    </header>
+    <main class="chat-container" id="chat-container">
+      <div id="chat-box" class="chat-box"></div>
+    </main>
+    <form id="chat-form" class="input-area">
+      <textarea id="user-input" placeholder="Send a message." rows="1" autocomplete="off" required></textarea>
+      <button type="submit" aria-label="Send">
+        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </form>
+    <aside id="editor-panel" class="editor-panel hidden">
+      <h2>Customize Interface</h2>
+      <div class="control-group">
+        <label for="bg-color">Background Color:</label>
+        <input type="color" id="bg-color" name="bg-color" value="#343541" />
+      </div>
+      <div class="control-group">
+        <label for="text-color">Text Color:</label>
+        <input type="color" id="text-color" name="text-color" value="#e6e6e6" />
+      </div>
+      <div class="control-group">
+        <label for="user-bubble-color">User Bubble Color:</label>
+        <input type="color" id="user-bubble-color" name="user-bubble-color" value="#10a37f" />
+      </div>
+      <div class="control-group">
+        <label for="bot-bubble-color">Bot Bubble Color:</label>
+        <input type="color" id="bot-bubble-color" name="bot-bubble-color" value="#444654" />
+      </div>
+      <div class="control-group">
+        <label for="chat-width">Chat Width (px):</label>
+        <input type="number" id="chat-width" name="chat-width" min="300" max="1200" value="600" />
+      </div>
+      <div class="control-group">
+        <label for="chat-height">Chat Height (px):</label>
+        <input type="number" id="chat-height" name="chat-height" min="300" max="900" value="540" />
+      </div>
+      <button id="reset-btn" class="reset-btn">Reset to Default</button>
+      <button id="apply-btn" class="apply-btn">Apply Changes</button>
+      
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
