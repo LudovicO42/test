@@ -1,0 +1,18 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.jforensicsuite.mobile'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.jforensicsuite.mobile.alpha'
+        minSdk 24
+        targetSdk 36
+        versionCode 2
+        versionName '0.1.1-alpha'
+    }
+
+    buildTypes {
+        release { minifyEnabled false }
+    }
+}
